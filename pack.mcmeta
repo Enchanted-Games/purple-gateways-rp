@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 18,
-    "supported_formats": [18, 46],
+    "supported_formats": [18, 52],
     "description": [
       "",
       {
@@ -20,7 +20,7 @@
         "bold": true
       },
       {
-        "text": "\nv2.1 | By Enchanted Games",
+        "text": "\nv2.2 | By Enchanted Games",
         "color": "gray",
         "underlined": false
       }
@@ -28,6 +28,10 @@
   },
   "overlays": {
     "entries": [
+      {
+        "directory": "1_21_4_below_compat",
+        "formats": [18, 51]
+      },
       {
         "directory": "1_21_1_below_compat",
         "formats": [18, 41]
