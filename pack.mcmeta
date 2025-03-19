@@ -1,11 +1,11 @@
 {
   "pack": {
     "pack_format": 18,
-    "supported_formats": [18, 52],
+    "supported_formats": [18, 55],
     "description": [
       "",
       {
-        "text": "Imporves ",
+        "text": "Improves ",
         "color": "#fae9ec",
         "bold": true
       },

@@ -25,7 +25,7 @@ in float vertexDistance;
 #endif
 
 #if !(PORTAL_LAYERS == 16 || PORTAL_LAYERS == 15)
-// fallback in case some mod uses pipeline with a custom define or something
+// fallback in case some mod uses this shader with a custom amount of layers or something
 const vec3[] COLORS = vec3[](
     vec3(0.022087, 0.098399, 0.110818),
     vec3(0.011892, 0.095924, 0.089485),
@@ -46,7 +46,8 @@ const vec3[] COLORS = vec3[](
 );
 #endif
 
-vec2 ScreenSize = vec2(1920,1920);
+vec2 ScreenSize = vec2(1920, 1080);
+
 #moj_import <eg_purple_gateways_remastered/logic/portal_variables.glsl>
 
 out vec4 fragColor;
