@@ -1,31 +1,16 @@
 #version 150
 
+#moj_import <minecraft:fog.glsl>
+#moj_import <minecraft:matrix.glsl>
+#moj_import <minecraft:globals.glsl>
+
 uniform sampler2D Sampler0;
 uniform sampler2D Sampler1;
 
-uniform float GameTime;
-uniform float FogStart;
-uniform float FogEnd;
-uniform vec4 FogColor;
-
 in vec4 texProj0;
-in float vertexDistance;
+in float sphericalVertexDistance;
+in float cylindricalVertexDistance;
 
-#moj_import <minecraft:fog.glsl>
-#moj_import <minecraft:matrix.glsl>
-
-#if PORTAL_LAYERS == 15
-// end portal stuff
-#moj_import <eg_purple_gateways_remastered/end_portal_settings.glsl>
-#endif
-
-#if PORTAL_LAYERS == 16
-// end gateway stuff
-#moj_import <eg_purple_gateways_remastered/end_gateway_settings.glsl>
-#endif
-
-#if !(PORTAL_LAYERS == 16 || PORTAL_LAYERS == 15)
-// fallback in case some mod uses this shader with a custom amount of layers or something
 const vec3[] COLORS = vec3[](
     vec3(0.022087, 0.098399, 0.110818),
     vec3(0.011892, 0.095924, 0.089485),
@@ -44,14 +29,10 @@ const vec3[] COLORS = vec3[](
     vec3(0.204675, 0.390010, 0.302066),
     vec3(0.080955, 0.314821, 0.661491)
 );
-#endif
-
-vec2 ScreenSize = vec2(1920, 1080);
-
-#moj_import <eg_purple_gateways_remastered/logic/portal_variables.glsl>
 
 out vec4 fragColor;
 
 void main() {
-    #moj_import <eg_purple_gateways_remastered/logic/portal_main.glsl>
+    vec3 color = textureProj(Sampler0, texProj0).rgb * COLORS[0];
+    fragColor = apply_fog(vec4(color, 1.0), sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
 }
