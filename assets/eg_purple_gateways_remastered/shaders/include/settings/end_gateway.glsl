@@ -1,4 +1,4 @@
-#define MIN_STAR_SIZE 6
+#define MIN_STAR_SIZE 5
 #define MAX_STAR_SIZE 0.7
 
 #define SPEED_MULTIPLIER 1
