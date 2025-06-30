@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 62,
-    "supported_formats": [62, 63],
+    "supported_formats": [62, 64],
     "description": [
       "",
       {
@@ -20,7 +20,7 @@
         "bold": true
       },
       {
-        "text": "\nv2.3 | By Enchanted Games"
+        "text": "\nv2.3.1 | By Enchanted Games"
       }
     ]
   }
