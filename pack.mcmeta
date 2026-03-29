@@ -1,7 +1,7 @@
 {
   "pack": {
-    "pack_format": 62,
-    "supported_formats": [62, 64],
+    "min_format": 84,
+    "max_format": 84,
     "description": [
       "",
       {
@@ -15,12 +15,24 @@
         "bold": true
       },
       {
-        "text": " Portals!",
+        "text": " Portals!\n",
         "color": "#995a90",
         "bold": true
       },
       {
-        "text": "\nv2.3.1 | By Enchanted Games"
+        "text": "v2.3.1"
+      },
+      {
+        "text": " | by "
+      },
+      {
+        "player": {
+          "name": "Enchanted_Games"
+        },
+        "color": "white"
+      },
+      {
+        "text": " Enchanted_Games "
       }
     ]
   }
